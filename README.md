@@ -25,7 +25,7 @@ Possible usage:
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 new HTMLWebpackPlugin({
-    template: './test.js!extract-loader!html-loader!ejs-compiled-loader!src/views/home.ejs',
+    template: 'url-replace-loader!extract-loader!html-loader!ejs-compiled-loader!src/views/home.ejs',
     filename: 'home.html',
     chunks: ['vendor', 'home'],
 }),
