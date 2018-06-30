@@ -1,0 +1,25 @@
+{
+  "name": "url-replace-loader",
+  "version": "1.0.0",
+  "description": "Url replacer webpack loader, it will just replace url(a.jpg) with \"url(\" + require(\"a.jpg\") + \")\" ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apotap2/url-replace-loader.git"
+  },
+  "keywords": [
+    "url",
+    "replace",
+    "webpack",
+    "loader"
+  ],
+  "author": "Aleksandr Potapchuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apotap2/url-replace-loader/issues"
+  },
+  "homepage": "https://github.com/apotap2/url-replace-loader#readme"
+}
