@@ -10,12 +10,15 @@ module.exports = function (content) {
   var notUrl = 0
 
   while (match != null) {
-    var len = match.index - notUrl
-    if (len) {
-      res.push(' + ' + JSON.stringify(content.substr(notUrl, len)))
+    if (!match[1].includes("http")) {
+      var len = match.index - notUrl
+
+      if (len) {
+        res.push(' + ' + JSON.stringify(content.substr(notUrl, len)))
+      }
+      res.push(' + "url(" + require ("' + match[1] + '") + ")"')
+      notUrl = match.index + match[0].length
     }
-    res.push(' + "url(" + require ("' + match[1] + '") + ")"')
-    notUrl = match.index + match[0].length
     match = myRegexp.exec(content);
   }
 
